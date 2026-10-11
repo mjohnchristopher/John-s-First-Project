@@ -1,99 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>0 → Shipped · Resume Parser</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <header class="nav">
-    <div class="container nav-inner">
-      <a href="#" class="logo">0<span class="arrow">→</span>Shipped</a>
-      <nav class="nav-links">
-        <a href="#how">How it works</a>
-        <a href="#upload">Try it</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero container">
-      <p class="eyebrow">Mock build · runs fully in your browser</p>
-      <h1>Score your resume.<br /><span class="accent">See what's missing.</span></h1>
-      <p class="sub">
-        Upload a PDF and get an instant score, the skills that show up on your
-        resume, and the ones recruiters look for but can't find.
-      </p>
-    </section>
-
-    <section class="upload-section container" id="upload">
-      <div class="dropzone" id="dropzone" role="button" tabindex="0" aria-label="Upload a resume PDF">
-        <input type="file" id="fileInput" accept="application/pdf,.pdf" hidden />
-        <div class="dz-icon">📄</div>
-        <p class="dz-title">Drag &amp; drop your resume</p>
-        <p class="dz-sub">PDF only, up to 5 MB</p>
-        <div class="dz-actions">
-          <button class="btn btn-primary" type="button" id="browseBtn">Choose file</button>
-          <button class="btn btn-ghost" type="button" id="sampleBtn">Try a sample resume</button>
-        </div>
-        <p class="dz-error" id="dzError" hidden></p>
-      </div>
-      <p class="file-line" id="fileLine" hidden></p>
-    </section>
-
-    <section class="analyzing container" id="analyzing" hidden>
-      <div class="analyzing-card">
-        <div class="spinner"></div>
-        <p id="statusText" aria-live="polite">Extracting text from PDF…</p>
-      </div>
-    </section>
-
-    <section class="report container" id="report" hidden>
-      <div class="score-card">
-        <p class="card-label">Resume score</p>
-        <div class="ring-wrap score--mid" id="scoreTier">
-          <svg class="ring" viewBox="0 0 120 120" aria-hidden="true">
-            <circle class="ring-track" cx="60" cy="60" r="52"></circle>
-            <circle class="ring-value" id="ringValue" cx="60" cy="60" r="52"></circle>
-          </svg>
-          <div class="ring-center">
-            <span id="scoreNumber">0</span>
-            <small>/100</small>
-          </div>
-        </div>
-        <p class="score-note" id="scoreNote"></p>
-      </div>
-
-      <div class="skills-card">
-        <div class="skills-col">
-          <h3><span class="dot dot-good"></span> Skills on your resume</h3>
-          <div class="chips" id="presentChips"></div>
-        </div>
-        <div class="skills-col">
-          <h3><span class="dot dot-miss"></span> Missing skills</h3>
-          <div class="chips" id="missingChips"></div>
-          <p class="hint">Common asks for the roles this resume targets.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="how container" id="how">
-      <h2>How it works</h2>
-      <div class="steps">
-        <div class="step"><span>1</span><h3>Upload</h3><p>Drop in your resume as a PDF.</p></div>
-        <div class="step"><span>2</span><h3>Parse</h3><p>Text is extracted and matched against a skill library.</p></div>
-        <div class="step"><span>3</span><h3>Score</h3><p>You get a score plus present and missing skills.</p></div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <p><strong>0→Shipped · Resume Parser</strong> — mock build. Scores and skill lists are simulated locally; your file never leaves the browser.</p>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0 → Shipped · Resume Parser</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
